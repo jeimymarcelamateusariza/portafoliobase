@@ -1,0 +1,28 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.iconos{
+    &__listado{
+        transition-property: transform;
+        transition-duration: 300ms;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    &__grid{
+        @include m.tablet { 
+            @include m.grid(3, 2rem);
+        }
+    }
+    &__imagen{
+        width: 15rem;
+        height: 15rem;
+        margin: 2rem auto;
+    }
+    &__texto{
+        font-size: 3rem;
+        color: v.$primario;
+        text-align: center;
+    }
+   
+}

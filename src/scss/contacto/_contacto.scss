@@ -1,0 +1,43 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.contacto{
+    margin-top: -2px;
+    background-color: v.$primario;
+    &__contenido{
+        background-color: v.$blanco;
+        padding-top: v.$separacion;
+        margin-top: -10rem;
+        position: relative;
+        padding: 5rem 2rem;
+        @include m.tablet { 
+            padding: 10rem 5rem;
+        }
+    }
+    &__texto{
+        text-align: center;
+        @include m.tablet { 
+            font-size: 2.5rem;            
+        }
+    }
+    &__grid{
+        text-align: center;
+        padding: 2rem 0;
+        @include m.tablet { 
+            @include m.grid(3, 3rem);  
+        }
+    }
+    &__informacion{
+        &--border{
+            @include m.tablet { 
+            border-left: 5px groove v.$secundario;
+            border-right: 5px groove v.$secundario;
+            padding: 0 3rem;   
+            }
+        }
+        margin-bottom: 2.5rem;
+        &:last-of-type{
+            border-right: none;
+        }
+    }
+}

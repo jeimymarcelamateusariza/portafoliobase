@@ -1,0 +1,16 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer{
+    &__redes{
+        display: flex;
+        padding: 2rem 0 0 0;
+        justify-content: center;
+    }
+}
+.redes{
+    &__imagen{
+        max-width: 5rem;
+        margin: 0 5rem
+    }
+}

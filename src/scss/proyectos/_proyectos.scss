@@ -1,0 +1,37 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.proyectos{
+    padding-bottom: 3rem;
+    background-color: v.$primario;
+    margin-top: -2px;
+    &__contenido{
+        padding: v.$separacion 0;
+        margin-bottom: v.$separacion;
+    }
+    &__heading{
+        color: v.$blanco;
+    }
+    &__grid{
+        padding-top: v.$separacion;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        @include m.tablet { 
+            @include m.grid(3, v.$separacion);
+        }
+    }    
+}
+.boton{
+    @include m.boton(v.$secundario, v.$blanco);
+    @include m.telefono { 
+        margin: 2rem auto 0 auto;
+    }
+    @include m.tablet { 
+        margin: 1rem auto 0 auto;
+    }
+}

@@ -1,0 +1,19 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.demos{
+    background-color: v.$primario;
+    margin-top: -2px;
+    &__contenido{
+        background-color: v.$blanco;
+        padding: 5rem 2rem;
+        @include m.tablet { 
+            margin-top: -10rem;
+            padding: 10rem 5rem 5rem;
+            position: relative;
+        }
+    }
+    &__heading{
+        text-align: center;
+    }
+}

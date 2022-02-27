@@ -1,0 +1,57 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.proyecto{
+    height: 30rem;
+    background-color: v.$blanco;
+    margin-bottom: 15rem;
+    position: relative;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    box-shadow: 0 3px 20px lighten(v.$secundario, 2);
+    transition: 300ms ease-in-out;
+    border-radius: 1.5rem;
+    &:last-of-type{
+        margin-bottom: 5rem;
+    }
+    @include m.tablet { 
+        height: 20rem;
+        margin-bottom: v.$separacion;
+    }
+    @include m.desktop { 
+        height: 30rem;
+    }
+    &__imagen{
+        position: relative;
+        width: 20rem;
+        height: 25rem;
+        object-fit: cover;
+        top: -10rem;
+        @include m.tablet { 
+            max-height: 20rem;
+        }
+        @include m.desktop { 
+            max-height: 30rem;
+        }
+    }
+    &__texto{
+        overflow: hidden;
+        margin-top: -5rem;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    &:hover{
+        height: 50rem;
+        @include m.tablet { 
+            height: 40rem;
+        }
+        @include m.desktop { 
+            height: 50rem;
+        }
+    }
+}
+
+
